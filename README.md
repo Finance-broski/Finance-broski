@@ -11,7 +11,7 @@ pipelines**. My focus is the difference between a backtest that *looks* good and
   sizing, daily-loss limits, prop-firm rules
 - **Strategy backtesting** — survivorship-free, realistic costs, deflated-Sharpe / walk-forward screening
 - **Trading dashboards & data pipelines** — Python · FastAPI · React
-- - **AI automation & LLM integration** (GPT / Claude / Gemini APIs) — document pipelines,
+- **AI automation & LLM integration** (GPT / Claude / Gemini APIs) — document pipelines,
   scheduled jobs, workflow automation with verification built in
 
 ## Featured projects
@@ -24,7 +24,7 @@ pipelines**. My focus is the difference between a backtest that *looks* good and
   dashboard (live equity, positions, risk) in React + FastAPI
 - **[nse-fundamental-screener](https://github.com/Finance-broski/nse-fundamental-screener)** —
   ranks stocks by Magic Formula, Quality, and Piotroski F-Score from primary balance-sheet data
-  - **[kite-execution-pipeline](https://github.com/Finance-broski/kite-execution-pipeline)** — SEBI-compliant
+- **[kite-execution-pipeline](https://github.com/Finance-broski/kite-execution-pipeline)** — SEBI-compliant
   Zerodha execution layer: target-diff orders, limit-only, human-in-the-loop, 11 tests
 
 ## Tech
