@@ -1,4 +1,4 @@
-# Ayan — Quant Developer
+# FinanceBroski — Quant Developer
 
 I build the tools systematic traders actually need — and I understand markets, not just code.
 
