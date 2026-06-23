@@ -20,3 +20,12 @@ I specialize in **trading bots, strategy backtesting, market dashboards, and fin
 - **[quant-cockpit](https://github.com/Finance-broski/quant-cockpit)** — real-time trading dashboard (live equity, positions, risk) in React + FastAPI.
 
 > The point-in-time reconstruction pipeline behind the data — bhavcopy + corporate actions + XBRL, ~29k filings across 1,300+ names — is proprietary. **[pit-data-sample](https://github.com/Finance-broski/pit-data-sample)** is exactly what it produces; diff it against whatever you use today, or [open an issue](https://github.com/Finance-broski/pit-data-sample/issues) to have it measured on your own tickers.
+
+## Tech
+Python · pandas · NumPy · SciPy · FastAPI · React · Vite · MQL5 · Pine Script
+
+## Work with me
+I take freelance work in trading systems, backtesting, and market tooling. Tell me your strategy
+or idea and I'll tell you honestly whether it's buildable and how I'd test it.
+
+*Available for freelance work: [Fiverr](https://www.fiverr.com/finance_broski) — AI automation, backtesting, and trading systems.*
