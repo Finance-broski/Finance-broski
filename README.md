@@ -1,31 +1,44 @@
-# FinanceBroski — Quant Developer
+# Ayan Jain (FinanceBroski)
 
-I build the tools systematic traders actually need — and I understand markets, not just code.
+**I measure what backtests lie about.**
 
-I specialize in **trading bots, strategy backtesting, market dashboards, and financial-data pipelines**. My focus is the difference between a backtest that *looks* good and one that's *real* — the strategies I build come with honest statistics, not curve-fit fantasies.
+I build point-in-time Indian equity data and audit backtests and datasets for the biases that
+quietly inflate them: survivorship, look-ahead, unrealistic costs. The difference between a
+backtest that *looks* good and one that is *real* is usually in the data, not the strategy, and
+that gap is what I put a number on.
 
-## What I build
+## The work
 
-- **Trading bots & Expert Advisors** (Python, MT5/MT4) with real risk controls — position sizing, daily-loss limits, prop-firm rules
-- **Strategy backtesting** — survivorship-free, realistic costs, deflated-Sharpe / walk-forward screening
-- **Trading dashboards & data pipelines** — Python · FastAPI · React
-- **AI automation & LLM integration** (GPT / Claude / Gemini APIs) — document pipelines, scheduled jobs, workflow automation with verification built in
+- **Working paper (under review at SSRN):** survivorship bias in Indian equities is not one
+  number. It ranges from +0.8 to +3.2 percentage points per year depending on the universe
+  vintage and the survivor definition. Same market, same method, a factor of four apart.
+- **[backtest-bias](https://github.com/Finance-broski/backtest-bias):** a pip-installable library
+  that checks any price panel for survivorship in one line, built on measured numbers, not folklore.
+- **[pit-data-sample](https://github.com/Finance-broski/pit-data-sample):** a free, real-data
+  sample of a survivorship-free, point-in-time NSE/BSE dataset (delisted names included,
+  fundamentals stamped with their real announcement date, CA-adjusted total-return prices). Also
+  on [Kaggle](https://www.kaggle.com/financebroski). Ships with a runnable notebook: the same
+  vanilla value screen "earns" roughly +3 pp/yr more once you let it cheat with survivorship and
+  look-ahead bias.
+- **[nse-factor-backtest](https://github.com/Finance-broski/nse-factor-backtest):** a
+  research-grade factor backtester with a pre-registered, one-shot held-out test that rejected its
+  own strategy. Most repos show winners; this one shows the machinery.
 
-## Featured projects
+Also built: an NSE fundamental screener (Magic Formula / Quality / Piotroski F-Score), a
+SEBI-compliant Zerodha execution layer (target-diff orders, limit-only, human-in-the-loop), and a
+real-time trading dashboard in React + FastAPI.
 
-- **[pit-data-sample](https://github.com/Finance-broski/pit-data-sample)** — a free, real-data sample of a survivorship-free, point-in-time NSE/BSE dataset: delisted names included, fundamentals stamped with their real announcement date, CA-adjusted total-return prices. Ships with a runnable notebook and a worked case study — the same vanilla value screen "earns" **~+4 pp/yr** more once you let it cheat with survivorship + look-ahead bias. CC-BY 4.0.
-- **[nse-factor-backtest](https://github.com/Finance-broski/nse-factor-backtest)** — research-grade factor backtester with a pre-registered, one-shot held-out test that **rejected its own strategy**. Most repos show winners; this one shows the machinery.
-- **[nse-fundamental-screener](https://github.com/Finance-broski/nse-fundamental-screener)** — ranks stocks by Magic Formula / Quality / Piotroski F-Score from primary balance-sheet data.
-- **[kite-execution-pipeline](https://github.com/Finance-broski/kite-execution-pipeline)** — SEBI-compliant Zerodha execution layer: target-diff orders, limit-only, human-in-the-loop, 11 tests.
-- **[quant-cockpit](https://github.com/Finance-broski/quant-cockpit)** — real-time trading dashboard (live equity, positions, risk) in React + FastAPI.
-
-> The point-in-time reconstruction pipeline behind the data — bhavcopy + corporate actions + XBRL, ~29k filings across 1,300+ names — is proprietary. **[pit-data-sample](https://github.com/Finance-broski/pit-data-sample)** is exactly what it produces; diff it against whatever you use today, or [open an issue](https://github.com/Finance-broski/pit-data-sample/issues) to have it measured on your own tickers.
-
-## Tech
-Python · pandas · NumPy · SciPy · FastAPI · React · Vite · MQL5 · Pine Script
+The point-in-time reconstruction pipeline behind the data (bhavcopy + corporate actions + XBRL
+across 1,300+ names) is proprietary. pit-data-sample is exactly what it produces; diff it against
+whatever you use today, or open an issue to have it measured on your own tickers.
 
 ## Work with me
-I take freelance work in trading systems, backtesting, and market tooling. Tell me your strategy
-or idea and I'll tell you honestly whether it's buildable and how I'd test it.
 
-*Available for freelance work: [Fiverr](https://www.fiverr.com/finance_broski) — AI automation, backtesting, and trading systems.*
+**Bias Check:** send a backtest or a dataset, and within 48 hours you get a written verdict on
+survivorship, look-ahead, cost realism, and marking, with what is wrong and roughly what it costs
+in return terms. Fixed price. Larger point-in-time data builds and audit engagements are scoped
+separately.
+
+Writeups and the measured numbers behind all of this: [financebroski.substack.com](https://financebroski.substack.com)
+
+**Tech:** Python, pandas, NumPy, SciPy, FastAPI, React, MQL5, Pine Script.
