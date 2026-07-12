@@ -36,8 +36,10 @@ whatever you use today, or open an issue to have it measured on your own tickers
 
 **Bias Check:** send a backtest or a dataset, and within 48 hours you get a written verdict on
 survivorship, look-ahead, cost realism, and marking, with what is wrong and roughly what it costs
-in return terms. Fixed price. Larger point-in-time data builds and audit engagements are scoped
-separately.
+in return terms. Fixed price. Start one here: [Bias Check intake](https://forms.gle/sAvosfHnitCBm9FD7).
+
+Larger point-in-time data builds and audit engagements are scoped separately: email
+ayanjain259@gmail.com.
 
 Writeups and the measured numbers behind all of this: [financebroski.substack.com](https://financebroski.substack.com)
 
