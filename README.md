@@ -1,46 +1,23 @@
-# Ayan Jain (FinanceBroski)
+# Ayan Jain
 
 **I measure what backtests lie about.**
 
-I build point-in-time Indian equity data and audit backtests and datasets for the biases that
-quietly inflate them: survivorship, look-ahead, unrealistic costs. The difference between a
-backtest that *looks* good and one that is *real* is usually in the data, not the strategy, and
-that gap is what I put a number on.
+Independent quantitative researcher and backtest auditor. I build systematic strategies and audit the data and code underneath them (point-in-time universes, survivorship, look-ahead, costs) before real capital is at risk.
 
-## The work
+### Published research
+**[Survivorship Bias in Indian Equities is not a Number](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7099378)** (SSRN, 2026). Survivorship bias is not a single figure. I measure it at anywhere from +0.8 to +3.2 percentage points a year on the same market, driven entirely by vintage and universe-construction choices most tools never report.
 
-- **Working paper (under review at SSRN):** survivorship bias in Indian equities is not one
-  number. It ranges from +0.8 to +3.2 percentage points per year depending on the universe
-  vintage and the survivor definition. Same market, same method, a factor of four apart.
-- **[backtest-bias](https://github.com/Finance-broski/backtest-bias):** a pip-installable library
-  that checks any price panel for survivorship in one line, built on measured numbers, not folklore.
-- **[pit-data-sample](https://github.com/Finance-broski/pit-data-sample):** a free, real-data
-  sample of a survivorship-free, point-in-time NSE/BSE dataset (delisted names included,
-  fundamentals stamped with their real announcement date, CA-adjusted total-return prices). Also
-  on [Kaggle](https://www.kaggle.com/financebroski). Ships with a runnable notebook: the same
-  vanilla value screen "earns" roughly +3 pp/yr more once you let it cheat with survivorship and
-  look-ahead bias.
-- **[nse-factor-backtest](https://github.com/Finance-broski/nse-factor-backtest):** a
-  research-grade factor backtester with a pre-registered, one-shot held-out test that rejected its
-  own strategy. Most repos show winners; this one shows the machinery.
+### What I ship
+- **[backtest-bias](https://github.com/Finance-broski/backtest-bias)**: open-source library (`pip install backtest-bias`) that flags survivor-only data in any backtest pipeline and fails your CI build when it silently goes biased. Survivorship detection and integrity gates for financial price panels.
+- **[pit-data-sample](https://github.com/Finance-broski/pit-data-sample)**: point-in-time NSE/BSE data with a reproducible bias-demonstration notebook.
+- **[nse-factor-backtest](https://github.com/Finance-broski/nse-factor-backtest)**: research-grade factor backtester with pre-registered testing.
+- **[nse-fundamental-screener](https://github.com/Finance-broski/nse-fundamental-screener)**: Magic Formula, Quality, and Piotroski F-Score ranking on Indian equities.
 
-Also built: an NSE fundamental screener (Magic Formula / Quality / Piotroski F-Score), a
-SEBI-compliant Zerodha execution layer (target-diff orders, limit-only, human-in-the-loop), and a
-real-time trading dashboard in React + FastAPI.
+### A measured example
+24% of the top-500 Indian stocks (by 2015 turnover) are invisible to yfinance today: delisted, merged, or renamed with no map back. Test on the survivors only and your equity curve is built from a roster knowable only in hindsight. Full method and numbers in the [paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7099378) and on [Kaggle](https://www.kaggle.com/financebroski).
 
-The point-in-time reconstruction pipeline behind the data (bhavcopy + corporate actions + XBRL
-across 1,300+ names) is proprietary. pit-data-sample is exactly what it produces; diff it against
-whatever you use today, or open an issue to have it measured on your own tickers.
+### The work
+If you are about to fund, trade, or lever a strategy on the strength of a backtest, I audit it: survivorship, look-ahead, cost realism, execution feasibility, overfitting, statistical validity. One written verdict, reported vs honest numbers. Details at [finance-broski.github.io](https://finance-broski.github.io).
 
-## Work with me
-
-**Bias Check:** send a backtest or a dataset, and within 48 hours you get a written verdict on
-survivorship, look-ahead, cost realism, and marking, with what is wrong and roughly what it costs
-in return terms. Fixed price. Start one here: [Bias Check intake](https://forms.gle/sAvosfHnitCBm9FD7).
-
-Larger point-in-time data builds and audit engagements are scoped separately: email
-ayanjain259@gmail.com.
-
-Writeups and the measured numbers behind all of this: [financebroski.substack.com](https://financebroski.substack.com)
-
-**Tech:** Python, pandas, NumPy, SciPy, FastAPI, React, MQL5, Pine Script.
+### Find me
+[Website](https://finance-broski.github.io) | [LinkedIn](https://www.linkedin.com/in/ayanjain259) | [Substack (The Bias Ledger)](https://financebroski.substack.com) | [Kaggle](https://www.kaggle.com/financebroski) | [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7099378)
